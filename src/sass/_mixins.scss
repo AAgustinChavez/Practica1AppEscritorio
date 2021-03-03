@@ -1,0 +1,33 @@
+$base: 12;
+
+@function getWidth($cols){
+    @return $cols / $base * 100% ;
+}
+
+@mixin base1 {
+    width: getWidth(12);
+    //background: $backgroundColor1;
+}
+
+@mixin base2 {
+    width: getWidth(9);
+    //background: $backgroundColor2;
+}
+
+@mixin base3 {
+    width: getWidth(6);
+    //background: $backgroundColor3;
+}
+
+@mixin base4 {
+    width: getWidth(3);
+    //background: $backgroundColor4;
+}
+
+@mixin container-values {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}

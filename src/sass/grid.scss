@@ -1,0 +1,105 @@
+@import 'mixins';
+
+.container{
+    @include container-values;
+}
+
+.row{
+    @extend .container;
+    clear: both;
+    display: table;
+}
+ 
+[class*= col-]{
+    float: left;
+    border: 2px solid black;
+    padding: 30px;
+}
+
+/*=============================================
+    PANTALLA DE ESCRITORIO GRANDE - lg
+=============================================*/
+
+@media screen and (min-width: 1200px){
+    .col-lg-12{
+        @include base1;
+    }
+    
+    .col-lg-9{
+        @include base2;
+    }
+    
+    .col-lg-6{
+        @include base3;
+    }
+    
+    .col-lg-3{
+        @include base4;
+    }
+}
+
+/*=============================================
+    PANTALLA DE ESCRITORIO MEDIANO - md
+=============================================*/
+
+@media screen and (max-width: 1999px) and (min-width: 992px){
+    .col-md-12{
+        @include base1;
+    }
+    
+    .col-md-9{
+        @include base2;
+    }
+    
+    .col-md-6{
+        @include base3;
+    }
+    
+    .col-md-3{
+        @include base4;
+    }
+}
+
+/*=============================================
+    PANTALLA DE TABLET - sm
+=============================================*/
+
+@media screen and (max-width: 991px) and (min-width: 768px){
+    .col-sm-12{
+        @include base1;
+    }
+    
+    .col-sm-9{
+        @include base2;
+    }
+    
+    .col-sm-6{
+        @include base3;
+    }
+    
+    .col-sm-3{
+        @include base4;
+    }
+}
+
+/*=============================================
+    PANTALLA DE CELULAR - xs
+=============================================*/
+
+@media screen and (max-width: 767px){
+    .col-xs-12{
+        @include base1;
+    }
+    
+    .col-xs-9{
+        @include base2;
+    }
+    
+    .col-xs-6{
+        @include base3;
+    }
+    
+    .col-xs-3{
+        @include base4;
+    }
+}
